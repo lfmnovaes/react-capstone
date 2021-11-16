@@ -9,6 +9,7 @@ const CryptoList = (data) => {
       {list.map((e) => (
         <Crypto
           key={e.id}
+          id={e.id}
           symbol={e.symbol}
           name={e.name}
           img={e.image.large}
