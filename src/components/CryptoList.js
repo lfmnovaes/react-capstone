@@ -1,27 +1,20 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import Container from 'react-bootstrap/Container';
-import { getCryptos } from '../redux/cryptos/cryptos';
+import React from 'react';
+import Row from 'react-bootstrap/Row';
 import Crypto from './Crypto';
 
-const CryptoList = () => {
-  const dispatch = useDispatch();
-  const cryptoStore = useSelector((store) => store.cryptoReducer);
-
-  useEffect(() => {
-    dispatch(getCryptos());
-  }, []);
-
-  const cryptoList = cryptoStore.map(
-    (crypto) => (
-      <Crypto key={crypto.id} data={crypto} />
-    ),
-  );
-
+const CryptoList = (data) => {
+  const { list } = data;
   return (
-    <Container fluid>
-      {cryptoList}
-    </Container>
+    <Row xs={2} lg={4} className="g-2">
+      {list.map((e) => (
+        <Crypto
+          key={e.id}
+          symbol={e.symbol}
+          name={e.name}
+          img={e.image.large}
+        />
+      ))}
+    </Row>
   );
 };
 

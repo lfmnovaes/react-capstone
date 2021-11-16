@@ -1,26 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter,
   Routes,
   Route,
 } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import store from './redux/configureStore';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCryptos } from './redux/cryptos/cryptos';
 import Nav from './components/Nav';
 import CryptoList from './components/CryptoList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
+  const dispatch = useDispatch();
+  const cryptoList = useSelector((store) => store.cryptoReducer);
+
+  useEffect(() => {
+    dispatch(getCryptos());
+  }, []);
+
   return (
     <div className="app">
       <BrowserRouter>
         <Nav />
-        <Provider store={store}>
-          <Routes>
-            <Route path="/" element={<CryptoList />} exact />
-          </Routes>
-        </Provider>
+        <Routes>
+          <Route exact path="/" element={<CryptoList list={cryptoList} />} />
+        </Routes>
       </BrowserRouter>
     </div>
   );

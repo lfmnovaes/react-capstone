@@ -1,29 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Figure from 'react-bootstrap/Figure';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
 
-export default function Crypto({ data }) {
+export default function Crypto(data) {
+  const {
+    id, symbol, name, img,
+  } = data;
   return (
-    <Figure>
-      <Figure.Image
-        width={171}
-        height={180}
-        alt="171x180"
-        src="holder.js/171x180"
-      />
-      <Figure.Caption>
-        {data.symbol}
-        {' | '}
-        {data.name}
-      </Figure.Caption>
-    </Figure>
+    <Col>
+      <Card>
+        <Card.Img variant="top" src={img} className="stretched-link" />
+        <Card.Body>
+          <Card.Title>{symbol}</Card.Title>
+          <Card.Text>
+            <a href={`/${id}`} className="stretched-link">
+              {name}
+            </a>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </Col>
   );
 }
-
-Crypto.propTypes = {
-  data: PropTypes.shape({
-    id: PropTypes.string,
-    symbol: PropTypes.string,
-    name: PropTypes.string,
-  }).isRequired,
-};
