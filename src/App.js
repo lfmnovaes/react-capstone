@@ -17,7 +17,9 @@ function App() {
   const cryptoList = useSelector((store) => store.cryptoReducer);
 
   useEffect(() => {
-    dispatch(getCryptos());
+    if (cryptoList.length === 0) {
+      dispatch(getCryptos());
+    }
   }, []);
 
   return (

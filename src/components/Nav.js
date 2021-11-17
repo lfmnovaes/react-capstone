@@ -7,7 +7,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 function Nav() {
   return (
-    <Navbar bg="light">
+    <Navbar className="nav-bg">
       <Container fluid>
         <Navbar.Brand>
           <NavLink to="/" className="nav-link">

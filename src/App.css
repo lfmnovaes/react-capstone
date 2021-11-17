@@ -1,5 +1,15 @@
-.app {
-  text-align: center;
+:root {
+  --pink: #ec4c8a;
+  --dark-pink: #d24379;
+}
+
+.nav-bg {
+  background-color: var(--dark-pink);
+}
+
+.stretched-link {
+  color: black;
+  text-decoration: none;
 }
 
 .cards {
@@ -9,4 +19,32 @@
 
 .cards > div {
   flex: 50%;
+}
+
+.card-body {
+  text-align: right;
+}
+
+.crypto-img {
+  background-color: var(--pink);
+}
+
+.crypto-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--pink);
+  padding: 10px 0;
+}
+
+.crypto-bottom {
+  text-align: center;
+}
+
+.crypto-bottom > li {
+  background-color: var(--pink);
+  padding: 20px 0;
+}
+.crypto-bottom > li:nth-child(odd) {
+  background: var(--dark-pink);
 }
