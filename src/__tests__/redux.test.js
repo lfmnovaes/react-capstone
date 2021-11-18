@@ -20,7 +20,7 @@ const action = {
   payload: [],
 }
 
-describe('Test redux action', () => {
+describe('Test redux', () => {
   test('Check if gets empty', () => {
     expect(reducer([], action)).toEqual([]);
   });

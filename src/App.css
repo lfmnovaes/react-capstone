@@ -39,11 +39,17 @@ a {
   color: white;
 }
 
-.row > div:nth-child(odd) > .card {
+.row > div:nth-child(1) > .card,
+.row > div:nth-child(3) > .card,
+.row > div:nth-child(6) > .card,
+.row > div:nth-child(8) > .card {
   background-color: var(--pink);
 }
 
-.row > div:nth-child(even) > .card {
+.row > div:nth-child(2) > .card,
+.row > div:nth-child(4) > .card,
+.row > div:nth-child(5) > .card,
+.row > div:nth-child(7) > .card {
   background-color: var(--dark-pink);
 }
 
@@ -77,19 +83,13 @@ a {
 }
 
 @media only screen and (max-width: 991px) {
-  .row > div:nth-child(3) > .card {
+  .row > div:nth-child(3) > .card,
+  .row > div:nth-child(6) > .card {
     background-color: var(--dark-pink);
   }
 
-  .row > div:nth-child(4) > .card {
-    background-color: var(--pink);
-  }
-
-  .row > div:nth-child(7) > .card {
-    background-color: var(--dark-pink);
-  }
-
-  .row > div:nth-child(8) > .card {
+  .row > div:nth-child(4) > .card,
+  .row > div:nth-child(5) > .card {
     background-color: var(--pink);
   }
 }

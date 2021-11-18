@@ -11,13 +11,14 @@ function Nav(data) {
   }
 
   const { sendData } = data;
+  const location = useLocation().pathname;
 
   return (
     <Navbar className="nav-bg">
       <Container fluid>
         <Navbar.Brand>
           <NavLink to="/" className="nav-link">
-            {useLocation().pathname === '/' ? (
+            {location === '/' ? (
               <AiOutlineHome />
             ) : (
               <IoChevronBack />
@@ -27,14 +28,14 @@ function Nav(data) {
       </Container>
       <Container fluid>
         <Navbar.Text className="fs-3">
-          {useLocation().pathname === '/' ? (
+          {location === '/' ? (
             'Home'
           ) : (
-            titleCase(useLocation().pathname)
+            titleCase(location)
           )}
         </Navbar.Text>
       </Container>
-      {useLocation().pathname === '/' ? (
+      {location === '/' ? (
         <input onChange={(e) => { sendData(e.target.value); }} type="text" name="search" id="search" placeholder="Search" />
       ) : (
         <input className="placeholder" />
