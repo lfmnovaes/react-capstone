@@ -2,12 +2,23 @@
 
 Web application focused on mobile experience to show detailed information of popular crypto currencies.
 
+## Preview
+
+Mobile (425px)
+![preview1](./preview1.png)
+
+Desktop (1024px)
+![preview2](./preview2.png)
+
 ## Built With
 
 - Node.js
 - React & Redux
 - JavaScript
 - Bootstrap
+
+## Live Demo
+[Netlify Live Demo](https://react-capstone-lfmn.netlify.app/)
 
 ## Getting Started
 
