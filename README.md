@@ -1,3 +1,5 @@
+![](https://img.shields.io/badge/Microverse-blueviolet) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Flfmnovaes%2Freact-capstone&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
 # Crypto currency data (React Capstone Project)
 
 Web application focused on mobile experience to show detailed information of popular crypto currencies.
@@ -20,7 +22,7 @@ Desktop (1024px)
 - Bootstrap
 
 ## Live Demo
-[Netlify Live Demo](https://react-capstone-lfmn.netlify.app/)
+[Heroku Live Demo](https://react-capstone-lfmn.herokuapp.com/)
 
 ## Getting Started
 
