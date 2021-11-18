@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
@@ -7,12 +5,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import { IoChevronBack } from 'react-icons/io5';
 import { AiOutlineHome } from 'react-icons/ai';
 
-function Nav(props) {
+function Nav(data) {
   function titleCase(string) {
     return string.substring(1).charAt(0).toUpperCase() + string.slice(2).toLowerCase();
   }
 
-  const { sendData } = props;
+  const { sendData } = data;
 
   return (
     <Navbar className="nav-bg">

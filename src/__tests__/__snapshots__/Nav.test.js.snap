@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test Nav component Compare Nav with snapshot 1`] = `
+exports[`Test Nav component Compare Nav component with snapshot 1`] = `
 <nav
   className="nav-bg navbar navbar-expand navbar-light"
 >

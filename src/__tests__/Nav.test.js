@@ -5,10 +5,10 @@ import '@testing-library/jest-dom';
 import Nav from '../components/Nav';
 
 jest.mock('react-router-dom', () => ({
-  ...jest.requireActual("react-router-dom"),
+  ...jest.requireActual('react-router-dom'),
   useLocation: () => ({
-    pathname: "/"
-  })
+    pathname: '/',
+  }),
 }));
 
 describe('Test Nav component', () => {
@@ -16,7 +16,7 @@ describe('Test Nav component', () => {
     render(<BrowserRouter><Nav /></BrowserRouter>);
     expect(screen.getByText('Home')).toBeInTheDocument();
   });
-  test('Compare Nav with snapshot', () => {
+  test('Compare Nav component with snapshot', () => {
     const tree = renderer
       .create(<BrowserRouter><Nav /></BrowserRouter>)
       .toJSON();
