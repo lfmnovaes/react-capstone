@@ -5,7 +5,7 @@ export default function CryptoDetails({ data }) {
   return (
     <div>
       <div className="crypto-top">
-        <img src={data.image.large} alt={data.id} className="crypto-img" />
+        <img src={data.image.large} alt={data.id} />
         <p className="fs-1">
           {data.name}
           {` (${data.symbol})`}

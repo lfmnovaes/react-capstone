@@ -1,32 +1,58 @@
 :root {
   --pink: #ec4c8a;
-  --dark-pink: #d24379;
+  --nav-pink: #d24379;
+  --dark-pink: #c74174;
+}
+
+* {
+  color: white;
 }
 
 .nav-bg {
-  background-color: var(--dark-pink);
+  background-color: var(--nav-pink);
 }
 
-.stretched-link {
+.navbar-text {
+  color: white !important;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+nav > div:first-child {
+  flex-shrink: 0.9;
+}
+
+input {
   color: black;
+  margin-right: 2vw;
+  width: 40vw;
+}
+
+.placeholder {
+  opacity: 0;
+}
+
+a {
   text-decoration: none;
+  color: white;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
+.row > div:nth-child(odd) > .card {
+  background-color: var(--pink);
 }
 
-.cards > div {
-  flex: 50%;
+.row > div:nth-child(even) > .card {
+  background-color: var(--dark-pink);
 }
 
 .card-body {
   text-align: right;
 }
 
-.crypto-img {
-  background-color: var(--pink);
+.card-img-top {
+  max-width: 200px;
 }
 
 .crypto-top {
@@ -45,6 +71,25 @@
   background-color: var(--pink);
   padding: 20px 0;
 }
+
 .crypto-bottom > li:nth-child(odd) {
   background: var(--dark-pink);
+}
+
+@media only screen and (max-width: 991px) {
+  .row > div:nth-child(3) > .card {
+    background-color: var(--dark-pink);
+  }
+
+  .row > div:nth-child(4) > .card {
+    background-color: var(--pink);
+  }
+
+  .row > div:nth-child(7) > .card {
+    background-color: var(--dark-pink);
+  }
+
+  .row > div:nth-child(8) > .card {
+    background-color: var(--pink);
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter,
   Routes,
@@ -15,6 +15,8 @@ import './App.css';
 function App() {
   const dispatch = useDispatch();
   const cryptoList = useSelector((store) => store.cryptoReducer);
+  const [data, setData] = useState('');
+  const [filteredList, setFilter] = useState(cryptoList);
 
   useEffect(() => {
     if (cryptoList.length === 0) {
@@ -22,12 +24,21 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    setFilter(() => cryptoList.filter((e) => e.name.toLowerCase().includes(data)
+    || e.name.includes(data)));
+  }, [data]);
+
   return (
     <div className="app">
       <BrowserRouter>
-        <Nav />
+        <Nav sendData={setData} />
         <Routes>
-          <Route exact path="/" element={<CryptoList list={cryptoList} />} />
+          {filteredList.length === 0 ? (
+            <Route exact path="/" element={<CryptoList list={cryptoList} />} />
+          ) : (
+            <Route exact path="/" element={<CryptoList list={filteredList} />} />
+          )}
           {cryptoList.map((e) => (
             <Route
               key={e.id}

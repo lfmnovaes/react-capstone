@@ -12,6 +12,7 @@ const CryptoList = (data) => {
           id={e.id}
           symbol={e.symbol}
           name={e.name}
+          price={e.market_data.current_price.usd}
           img={e.image.large}
         />
       ))}
