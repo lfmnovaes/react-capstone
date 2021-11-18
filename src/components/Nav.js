@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
@@ -7,19 +5,20 @@ import Navbar from 'react-bootstrap/Navbar';
 import { IoChevronBack } from 'react-icons/io5';
 import { AiOutlineHome } from 'react-icons/ai';
 
-function Nav(props) {
+function Nav(data) {
   function titleCase(string) {
     return string.substring(1).charAt(0).toUpperCase() + string.slice(2).toLowerCase();
   }
 
-  const { sendData } = props;
+  const { sendData } = data;
+  const location = useLocation().pathname;
 
   return (
     <Navbar className="nav-bg">
       <Container fluid>
         <Navbar.Brand>
           <NavLink to="/" className="nav-link">
-            {useLocation().pathname === '/' ? (
+            {location === '/' ? (
               <AiOutlineHome />
             ) : (
               <IoChevronBack />
@@ -29,14 +28,14 @@ function Nav(props) {
       </Container>
       <Container fluid>
         <Navbar.Text className="fs-3">
-          {useLocation().pathname === '/' ? (
+          {location === '/' ? (
             'Home'
           ) : (
-            titleCase(useLocation().pathname)
+            titleCase(location)
           )}
         </Navbar.Text>
       </Container>
-      {useLocation().pathname === '/' ? (
+      {location === '/' ? (
         <input onChange={(e) => { sendData(e.target.value); }} type="text" name="search" id="search" placeholder="Search" />
       ) : (
         <input className="placeholder" />

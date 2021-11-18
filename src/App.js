@@ -22,19 +22,19 @@ function App() {
     if (cryptoList.length === 0) {
       dispatch(getCryptos());
     }
-  }, []);
+  }, [cryptoList.length, dispatch]);
 
   useEffect(() => {
     setFilter(() => cryptoList.filter((e) => e.name.toLowerCase().includes(data)
     || e.name.includes(data)));
-  }, [data]);
+  }, [data, cryptoList]);
 
   return (
     <div className="app">
       <BrowserRouter>
         <Nav sendData={setData} />
         <Routes>
-          {filteredList.length === 0 ? (
+          {filteredList.length === 0 && data === '' ? (
             <Route exact path="/" element={<CryptoList list={cryptoList} />} />
           ) : (
             <Route exact path="/" element={<CryptoList list={filteredList} />} />
