@@ -22,12 +22,12 @@ function App() {
     if (cryptoList.length === 0) {
       dispatch(getCryptos());
     }
-  }, [getCryptos]);
+  }, [cryptoList.length, dispatch]);
 
   useEffect(() => {
     setFilter(() => cryptoList.filter((e) => e.name.toLowerCase().includes(data)
     || e.name.includes(data)));
-  }, [data, setFilter]);
+  }, [data, cryptoList]);
 
   return (
     <div className="app">
