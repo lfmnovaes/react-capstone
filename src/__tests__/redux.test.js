@@ -18,7 +18,7 @@ const mockData = [{
 const action = {
   type: 'GET_CRYPTOS',
   payload: [],
-}
+};
 
 describe('Test redux', () => {
   test('Check if gets empty', () => {
