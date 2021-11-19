@@ -34,6 +34,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
    ```
 - Run `npm install` to install the necessary packages to run locally
 - After installing everything, run `npm start` and your default browser will open with the page
+- If doesn't do the step above automatically, you can open [http://localhost:3000](http://localhost:3000) to view it in the browser
 
 
 ## Other supported commands
@@ -44,14 +45,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   </summary>
 
 In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `npm test`
 
@@ -70,7 +63,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 </details>
 
-## Authors
+## Author
 
 👤 **Luís Fernando**
 
@@ -87,7 +80,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/lfmnovaes/rockets-missions/issues).
+Feel free to check the [issues page](https://github.com/lfmnovaes/react-capstone/issues).
 
 ## Show your support
 
