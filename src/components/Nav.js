@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { IoChevronBack } from 'react-icons/io5';
 import { AiOutlineHome } from 'react-icons/ai';
 
-function Nav(data) {
+const Nav = (data) => {
   function titleCase(string) {
     return string.substring(1).charAt(0).toUpperCase() + string.slice(2).toLowerCase();
   }
@@ -42,6 +42,6 @@ function Nav(data) {
       )}
     </Navbar>
   );
-}
+};
 
 export default Nav;

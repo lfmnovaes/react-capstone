@@ -12,7 +12,7 @@ import CryptoDetails from './components/CryptoDetails';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
   const cryptoList = useSelector((store) => store.cryptoReducer);
   const [data, setData] = useState('');
@@ -52,6 +52,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;

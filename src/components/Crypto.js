@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import { BsArrowRightCircle } from 'react-icons/bs';
 
-export default function Crypto(data) {
+const Crypto = (data) => {
   const {
     id, symbol, name, price, img,
   } = data;
@@ -27,4 +27,6 @@ export default function Crypto(data) {
       </Card>
     </Col>
   );
-}
+};
+
+export default Crypto;

@@ -1,32 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function CryptoDetails({ data }) {
-  return (
-    <div>
-      <div className="crypto-top">
-        <img src={data.image.large} alt={data.id} />
-        <p className="fs-1">
-          {data.name}
-          {` (${data.symbol})`}
-          <br />
-          Price: $
-          {data.market_data.current_price.usd}
-        </p>
-      </div>
-      <ul className="list-unstyled crypto-bottom fs-2">
-        <li>
-          Rank:&nbsp;
-          {data.market_data.market_cap_rank}
-        </li>
-        <li>
-          Price change in 24h:&nbsp;$
-          {(Math.round(data.market_data.price_change_24h * 100) / 100).toFixed(2)}
-        </li>
-      </ul>
+const CryptoDetails = ({ data }) => (
+  <div>
+    <div className="crypto-top">
+      <img src={data.image.large} alt={data.id} />
+      <p className="fs-1">
+        {data.name}
+        {` (${data.symbol})`}
+        <br />
+        Price: $
+        {data.market_data.current_price.usd}
+      </p>
     </div>
-  );
-}
+    <ul className="list-unstyled crypto-bottom fs-2">
+      <li>
+        Rank:&nbsp;
+        {data.market_data.market_cap_rank}
+      </li>
+      <li>
+        Price change in 24h:&nbsp;$
+        {(Math.round(data.market_data.price_change_24h * 100) / 100).toFixed(2)}
+      </li>
+    </ul>
+  </div>
+);
 
 CryptoDetails.propTypes = {
   data: PropTypes.shape({
@@ -45,3 +43,5 @@ CryptoDetails.propTypes = {
     }).isRequired,
   }).isRequired,
 };
+
+export default CryptoDetails;
