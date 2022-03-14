@@ -1,8 +1,11 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Flfmnovaes%2Freact-capstone&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
-# Crypto currency data (React Capstone Project)
+# Popular Crypto Currencies (React Capstone Project)
 
 Web application focused on mobile experience to show detailed information of popular crypto currencies.
+
+## Live Demo
+[Heroku Live Demo](https://react-capstone-lfmn.herokuapp.com/)
 
 ## Preview
 
@@ -16,13 +19,11 @@ Desktop (1024px)
 
 ## Built With
 
-- Node.js
-- React & Redux
-- JavaScript
-- Bootstrap
-
-## Live Demo
-[Heroku Live Demo](https://react-capstone-lfmn.herokuapp.com/)
+* [NodeJS](https://nodejs.org/en/)
+* [ReactJS](https://reactjs.org/)
+* [React Redux](https://react-redux.js.org/)
+* [React Bootstrap](https://react-bootstrap.github.io/)
+* [JestJS](https://jestjs.io/)
 
 ## Getting Started
 
@@ -35,7 +36,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Run `npm install` to install the necessary packages to run locally
 - After installing everything, run `npm start` and your default browser will open with the page
 - If doesn't do the step above automatically, you can open [http://localhost:3000](http://localhost:3000) to view it in the browser
-
 
 ## Other supported commands
 
