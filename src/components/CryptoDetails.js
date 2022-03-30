@@ -9,8 +9,7 @@ const CryptoDetails = ({ data }) => (
         {data.name}
         {` (${data.symbol})`}
         <br />
-        Price: $
-        {data.market_data.current_price.usd}
+        Price: ${data.market_data.current_price.usd}
       </p>
     </div>
     <ul className="list-unstyled crypto-bottom fs-2">

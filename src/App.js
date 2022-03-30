@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCryptos } from './redux/cryptos/cryptos';
 import Nav from './components/Nav';
@@ -25,8 +21,11 @@ const App = () => {
   }, [cryptoList.length, dispatch]);
 
   useEffect(() => {
-    setFilter(() => cryptoList.filter((e) => e.name.toLowerCase().includes(data)
-    || e.name.includes(data)));
+    setFilter(() =>
+      cryptoList.filter(
+        (e) => e.name.toLowerCase().includes(data) || e.name.includes(data)
+      )
+    );
   }, [data, cryptoList]);
 
   return (
@@ -37,15 +36,17 @@ const App = () => {
           {filteredList.length === 0 && data === '' ? (
             <Route exact path="/" element={<CryptoList list={cryptoList} />} />
           ) : (
-            <Route exact path="/" element={<CryptoList list={filteredList} />} />
+            <Route
+              exact
+              path="/"
+              element={<CryptoList list={filteredList} />}
+            />
           )}
           {cryptoList.map((e) => (
             <Route
               key={e.id}
               path={`/${e.id}`}
-              element={(
-                <CryptoDetails data={e} />
-              )}
+              element={<CryptoDetails data={e} />}
             />
           ))}
         </Routes>

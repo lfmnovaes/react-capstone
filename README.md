@@ -11,11 +11,11 @@ Web application focused on mobile experience to show detailed information of pop
 
 Mobile (425px)
 
-![preview1](./preview1.png)
+![Preview APP on Mobile](./preview-sm.png)
 
 Desktop (1024px)
 
-![preview2](./preview2.png)
+![Preview APP on Desktop](./preview.png)
 
 ## Built With
 

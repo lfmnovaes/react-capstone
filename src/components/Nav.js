@@ -7,7 +7,10 @@ import { AiOutlineHome } from 'react-icons/ai';
 
 const Nav = (data) => {
   function titleCase(string) {
-    return string.substring(1).charAt(0).toUpperCase() + string.slice(2).toLowerCase();
+    return (
+      string.substring(1).charAt(0).toUpperCase() +
+      string.slice(2).toLowerCase()
+    );
   }
 
   const { sendData } = data;
@@ -18,25 +21,25 @@ const Nav = (data) => {
       <Container fluid>
         <Navbar.Brand>
           <NavLink to="/" className="nav-link">
-            {location === '/' ? (
-              <AiOutlineHome />
-            ) : (
-              <IoChevronBack />
-            )}
+            {location === '/' ? <AiOutlineHome /> : <IoChevronBack />}
           </NavLink>
         </Navbar.Brand>
       </Container>
       <Container fluid>
         <Navbar.Text className="fs-3">
-          {location === '/' ? (
-            'Home'
-          ) : (
-            titleCase(location)
-          )}
+          {location === '/' ? 'Home' : titleCase(location)}
         </Navbar.Text>
       </Container>
       {location === '/' ? (
-        <input onChange={(e) => { sendData(e.target.value); }} type="text" name="search" id="search" placeholder="Search" />
+        <input
+          onChange={(e) => {
+            sendData(e.target.value);
+          }}
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search"
+        />
       ) : (
         <input className="placeholder" />
       )}

@@ -4,9 +4,7 @@ import Card from 'react-bootstrap/Card';
 import { BsArrowRightCircle } from 'react-icons/bs';
 
 const Crypto = (data) => {
-  const {
-    id, symbol, name, price, img,
-  } = data;
+  const { id, symbol, name, price, img } = data;
   return (
     <Col>
       <Card>
@@ -19,10 +17,7 @@ const Crypto = (data) => {
               {` (${symbol})`}
             </a>
           </Card.Title>
-          <Card.Text>
-            Price: $
-            {price}
-          </Card.Text>
+          <Card.Text>Price: ${price}</Card.Text>
         </Card.Body>
       </Card>
     </Col>

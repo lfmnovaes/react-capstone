@@ -5,7 +5,7 @@ import Crypto from './Crypto';
 const CryptoList = (data) => {
   const { list } = data;
   return (
-    <Row xs={2} lg={4} className="g-2">
+    <Row xs={2} lg={4} className="g-2 py-2 px-2">
       {list.map((e) => (
         <Crypto
           key={e.id}
